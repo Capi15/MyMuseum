@@ -1,9 +1,11 @@
 package com.example.mymuseum.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.example.mymuseum.R
 import kotlin.system.exitProcess
 
@@ -29,6 +31,12 @@ class LoginActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    fun goToRegister(view: View) {
+        val intent = Intent(this, RegisterActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
 }

@@ -6,4 +6,124 @@
     android:layout_height="match_parent"
     tools:context=".activities.RegisterActivity">
 
+    <TextView
+        android:id="@+id/textView_resgister_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Nome"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_resgister_nome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_resgister_nome"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:hint="Digite o seu Nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_resgister_nome" />
+
+    <TextView
+        android:id="@+id/textView_resgister_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Email"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_resgister_email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_resgister_nome" />
+
+    <EditText
+        android:id="@+id/editText_resgister_email"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:hint="Digite o seu Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_resgister_email" />
+
+    <TextView
+        android:id="@+id/textView_resgister_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Palavra-passe"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_resgister_email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_resgister_email" />
+
+    <EditText
+        android:id="@+id/editText_resgister_pass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:hint="Digite a sua palavra-passe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_resgister_pass" />
+
+    <TextView
+        android:id="@+id/textView_resgister_pass_conf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Comfirmação da palavra-passe"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_resgister_pass"
+        app:layout_constraintTop_toBottomOf="@+id/editText_resgister_pass"/>
+
+    <EditText
+        android:id="@+id/editText_resgister_pass_conf"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:hint="Comfirme a sua palavra-passe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_resgister_pass_conf" />
+
+
+    <Button
+        android:id="@+id/button_register_registar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Criar Conta"
+        app:layout_constraintBottom_toTopOf="@+id/button_register_voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_resgister_pass_conf"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_register_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:text="Voltar"
+        android:onClick="goToLogin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
