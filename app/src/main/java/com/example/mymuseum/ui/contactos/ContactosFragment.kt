@@ -1,4 +1,4 @@
-package com.example.mymuseum.ui.home
+package com.example.mymuseum.ui.contactos
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,18 +10,18 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.mymuseum.R
 
-class HomeFragment : Fragment() {
+class ContactosFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var contactosViewModel: ContactosViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        contactosViewModel =
+                ViewModelProviders.of(this).get(ContactosViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_contactos, container, false)
         return root
     }
 }
