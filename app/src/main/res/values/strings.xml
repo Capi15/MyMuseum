@@ -19,4 +19,6 @@
     <string name="terminar_sessao">Terminar Sessão</string>
     <string name="perfil">Perfil</string>
     <string name="categorias">Categorias</string>
+    <string name="titulo">Título</string>
+    <string name="descricao">Descrição</string>
 </resources>
