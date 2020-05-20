@@ -7,16 +7,97 @@
     tools:context=".ui.contactos.ContactosFragment">
 
     <TextView
-        android:id="@+id/text_gallery"
-        android:layout_width="match_parent"
+        android:id="@+id/contactos_telefone"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:layout_marginTop="32dp"
+        android:text="Telefone"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contactos_telefone_numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="253 171 555"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contactos_telefone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contactos_telefone" />
+
+    <TextView
+        android:id="@+id/contactos_telemovel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Telemóvel"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/contactos_telefone"
+        app:layout_constraintTop_toBottomOf="@+id/contactos_telefone" />
+
+    <TextView
+        android:id="@+id/contactos_telemovel_numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="967 333 213"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintBaseline_toBaselineOf="@+id/contactos_telemovel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contactos_telefone" />
+
+    <TextView
+        android:id="@+id/contactos_ou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="OU"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactos_telemovel" />
+
+    <TextView
+        android:id="@+id/contactos_mensagem_mensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Escreva-nos uma mensagem"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactos_ou" />
+
+    <EditText
+        android:id="@+id/contactos_mensagem_corpo"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactos_mensagem_mensagem" />
+
+    <Button
+        android:id="@+id/contactos_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar Mensagem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/contactos_mensagem_corpo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
