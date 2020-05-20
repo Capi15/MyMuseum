@@ -20,13 +20,13 @@
 
     <fragment
         android:id="@+id/nav_terminar_sessao"
-        android:name="com.example.mymuseum.ui.mensagens.MensagensFragment"
+        android:name="com.example.mymuseum.ui.terminarsessao.TerminarSessaoFragment"
         android:label="@string/terminar_sessao"
         tools:layout="@layout/fragment_mensagens" />
 
     <fragment
         android:id="@+id/nav_comprar_bilhete"
-        android:name="com.example.mymuseum.ui.mensagens.MensagensFragment"
+        android:name="com.example.mymuseum.ui.comprarbilhete.ComprarBilheteFragment"
         android:label="@string/comprar_bilhete"
         tools:layout="@layout/fragment_mensagens" />
 
@@ -38,7 +38,7 @@
 
     <fragment
         android:id="@+id/nav_perfil"
-        android:name="com.example.mymuseum.ui.mensagens.MensagensFragment"
+        android:name="com.example.mymuseum.ui.perfil.PerfilFragment"
         android:label="@string/perfil"
         tools:layout="@layout/fragment_perfil" />
 </navigation>

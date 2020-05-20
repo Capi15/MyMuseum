@@ -22,7 +22,7 @@ class HomeFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-        root.setBackgroundColor(Color.CYAN);
+        root.setBackgroundColor(Color.CYAN)
         //é criado um layout manager para este fragmento
         root.recylerView.layoutManager = LinearLayoutManager(activity)
         //depois é chamado o adaptador customizado

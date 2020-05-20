@@ -11,17 +11,12 @@ import androidx.lifecycle.ViewModelProviders
 import com.example.mymuseum.R
 
 class ComprarBilheteFragment : Fragment() {
-
-    private lateinit var comprarBilheteViewModel: ComprarBilheteViewModel
-
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        comprarBilheteViewModel =
-                ViewModelProviders.of(this).get(ComprarBilheteViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_contactos, container, false)
+        val root = inflater.inflate(R.layout.fragment_comprar_bilhete, container, false)
         return root
     }
 }

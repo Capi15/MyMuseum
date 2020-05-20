@@ -16,7 +16,7 @@ class TerminarSessaoFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_contactos, container, false)
+        val root = inflater.inflate(R.layout.fragment_terminar_sessao, container, false)
         val intent = Intent(context, LoginActivity::class.java)
         startActivity(intent)
         return root

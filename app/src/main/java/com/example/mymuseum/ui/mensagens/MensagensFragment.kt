@@ -12,15 +12,11 @@ import com.example.mymuseum.R
 
 class MensagensFragment : Fragment() {
 
-    private lateinit var mensagensViewModel: MensagensViewModel
-
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        mensagensViewModel =
-                ViewModelProviders.of(this).get(MensagensViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_mensagens, container, false)
         return root
     }

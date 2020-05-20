@@ -1,5 +1,6 @@
 package com.example.mymuseum.ui.perfil
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,16 +13,12 @@ import com.example.mymuseum.R
 
 class PerfilFragment : Fragment() {
 
-    private lateinit var perfilViewModel: PerfilViewModel
-
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        perfilViewModel =
-                ViewModelProviders.of(this).get(PerfilViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_contactos, container, false)
+        val root = inflater.inflate(R.layout.fragment_perfil, container, false)
         return root
     }
 }
