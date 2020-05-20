@@ -19,6 +19,10 @@ class TerminarSessaoFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_terminar_sessao, container, false)
         val intent = Intent(context, LoginActivity::class.java)
         startActivity(intent)
+        activity?.getSupportFragmentManager()?.popBackStack()
+        getActivity()?.finish()
         return root
     }
+
+
 }
