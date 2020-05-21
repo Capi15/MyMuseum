@@ -1,8 +1,10 @@
 package com.example.mymuseum.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -64,5 +66,10 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
 
+    }
+
+    fun goToCategoriaFromCard(view: View) {
+        val intent = Intent(this, CategoriaActivity::class.java)
+        startActivity(intent)
     }
 }

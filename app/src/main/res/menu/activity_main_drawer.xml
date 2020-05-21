@@ -12,7 +12,7 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/icon_home"
-            android:title="@string/categorias" />
+            android:title="@string/museus" />
         <item
             android:id="@+id/nav_contactos"
             android:icon="@drawable/icon_phone"
