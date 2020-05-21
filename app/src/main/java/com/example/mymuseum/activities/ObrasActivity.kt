@@ -4,6 +4,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.HorizontalScrollView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mymuseum.R
@@ -19,7 +20,7 @@ class ObrasActivity : AppCompatActivity() {
             findViewById<View>(R.id.obraLayoutId) as ConstraintLayout
         currentLayout.setBackgroundColor(Color.CYAN)
         //é criado um layout manager para este fragmento
-        recyclerViewObra.layoutManager = LinearLayoutManager(applicationContext)
+        recyclerViewObra.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.HORIZONTAL, false )
         //depois é chamado o adaptador customizado
         recyclerViewObra.adapter = ObraAdapter()
     }
