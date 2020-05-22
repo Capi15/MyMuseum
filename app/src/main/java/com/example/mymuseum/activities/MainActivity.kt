@@ -72,4 +72,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, CategoriaActivity::class.java)
         startActivity(intent)
     }
+
+    fun goToAllPrecos(view: View) {
+        val intent = Intent(this, PrecosBilheteActivity::class.java)
+        startActivity(intent)
+    }
+
 }

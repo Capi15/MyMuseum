@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/preco_museus_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+    <TextView
+        android:id="@+id/preco_museus_nome_museu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="NomeMuseu"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/preco_museus_image"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_image" />
+
+    <TextView
+        android:id="@+id/preco_museus_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Preço nos últimos 7 dias"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/preco_museus_nome_museu"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_nome_museu" />
+
+    <TextView
+        android:id="@+id/preco_museus_dia_1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="1 dia"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintStart_toStartOf="@+id/preco_museus_text"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_text" />
+
+    <TextView
+        android:id="@+id/preco_museus_dia_2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="2 dias"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintStart_toStartOf="@+id/preco_museus_dia_1_text"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_dia_1_text" />
+
+    <TextView
+        android:id="@+id/preco_museus_dia_3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="3 dias"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintStart_toStartOf="@+id/preco_museus_dia_2_text"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_dia_2_text" />
+
+    <TextView
+        android:id="@+id/preco_museus_dia_4_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="4 dias"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintStart_toStartOf="@+id/preco_museus_dia_3_text"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_dia_3_text" />
+
+    <TextView
+        android:id="@+id/preco_museus_dia_5_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="5 dias"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintStart_toStartOf="@+id/preco_museus_dia_4_text"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_dia_4_text" />
+
+    <TextView
+        android:id="@+id/preco_museus_dia_6_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="6 dias"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintStart_toStartOf="@+id/preco_museus_dia_5_text"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_dia_5_text" />
+
+    <TextView
+        android:id="@+id/preco_museus_dia_7_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="7 dias"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintStart_toStartOf="@+id/preco_museus_dia_6_text"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_dia_6_text" />
+
+    <TextView
+        android:id="@+id/preco_museus_euro_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:text="€"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_dia_1_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/preco_museus_dia_1_text" />
+
+    <TextView
+        android:id="@+id/preco_museus_euro_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_dia_2_text"
+        app:layout_constraintEnd_toEndOf="@+id/preco_museus_euro_1" />
+
+    <TextView
+        android:id="@+id/preco_museus_euro_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_dia_3_text"
+        app:layout_constraintEnd_toEndOf="@+id/preco_museus_euro_2" />
+
+    <TextView
+        android:id="@+id/preco_museus_euro_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_dia_4_text"
+        app:layout_constraintEnd_toEndOf="@+id/preco_museus_euro_3" />
+
+    <TextView
+        android:id="@+id/preco_museus_euro_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_dia_5_text"
+        app:layout_constraintEnd_toEndOf="@+id/preco_museus_euro_4" />
+
+    <TextView
+        android:id="@+id/preco_museus_euro_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_dia_6_text"
+        app:layout_constraintEnd_toEndOf="@+id/preco_museus_euro_5" />
+
+    <TextView
+        android:id="@+id/preco_museus_euro_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_dia_7_text"
+        app:layout_constraintEnd_toEndOf="@+id/preco_museus_euro_6" />
+
+    <TextView
+        android:id="@+id/preco_museus_valor_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0.00"
+        app:layout_constraintEnd_toStartOf="@+id/preco_museus_euro_1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/preco_museus_dia_1_text"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_text" />
+
+    <TextView
+        android:id="@+id/preco_museus_valor_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="0.00"
+        app:layout_constraintEnd_toStartOf="@+id/preco_museus_euro_2"
+        app:layout_constraintTop_toBottomOf="@+id/preco_museus_valor_1" />
+
+    <TextView
+        android:id="@+id/preco_museus_valor_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_euro_3"
+        app:layout_constraintEnd_toStartOf="@+id/preco_museus_euro_3" />
+
+    <TextView
+        android:id="@+id/preco_museus_valor_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_euro_4"
+        app:layout_constraintEnd_toStartOf="@+id/preco_museus_euro_4" />
+
+    <TextView
+        android:id="@+id/preco_museus_valor_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_euro_5"
+        app:layout_constraintEnd_toStartOf="@+id/preco_museus_euro_5" />
+
+    <TextView
+        android:id="@+id/preco_museus_valor_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_euro_6"
+        app:layout_constraintEnd_toStartOf="@+id/preco_museus_euro_6" />
+
+    <TextView
+        android:id="@+id/preco_museus_valor_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preco_museus_euro_7"
+        app:layout_constraintEnd_toStartOf="@+id/preco_museus_euro_7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
