@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PrecosBilheteActivity"></activity>
+        <activity android:name=".activities.PrecosBilheteActivity"
+            android:parentActivityName=".activities.MainActivity"></activity>
         <activity
             android:name=".activities.ObrasActivity"
             android:parentActivityName=".activities.CategoriaActivity" />

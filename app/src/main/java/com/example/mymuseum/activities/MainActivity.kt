@@ -78,4 +78,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun LimpaDados(view: View) {
+
+    }
+
 }

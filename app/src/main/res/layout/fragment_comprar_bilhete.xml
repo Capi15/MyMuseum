@@ -1,152 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/compraB_consultar_precos_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="@dimen/default_margin"
-        android:layout_marginEnd="32dp"
-        android:text="Consultar Preços"
-        android:onClick="goToAllPrecos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/compraB_museus_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/museus"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/compraB_consultar_precos_button"
-        app:layout_constraintTop_toBottomOf="@+id/compraB_consultar_precos_button" />
+        <Button
+            android:id="@+id/compraB_consultar_precos_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginEnd="32dp"
+            android:onClick="goToAllPrecos"
+            android:text="Consultar Preços"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/compraB_tipo_bilhete_text"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_checkBox_museu_3" />
 
-    <TextView
-        android:id="@+id/compraB_data_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Data"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/compraB_museus_text"
-        app:layout_constraintTop_toBottomOf="@+id/compraB_museus_text" />
+        <TextView
+            android:id="@+id/compraB_museus_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/museus"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/compraB_tipo_bilhete_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Tipo de Bilhete"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/compraB_data_text"
-        app:layout_constraintTop_toBottomOf="@+id/compraB_data_text" />
+        <TextView
+            android:id="@+id/compraB_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Data"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/compraB_museus_text"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_consultar_precos_button" />
 
-    <TextView
-        android:id="@+id/compraB_quantidade_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Quantidade"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/compraB_tipo_bilhete_text"
-        app:layout_constraintTop_toBottomOf="@+id/compraB_tipo_bilhete_text" />
+        <TextView
+            android:id="@+id/compraB_tipo_bilhete_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Tipo de Bilhete"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/compraB_data_text"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_data_text" />
 
-    <TextView
-        android:id="@+id/compraB_total_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Total a Pagar"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/compraB_quantidade_text"
-        app:layout_constraintTop_toBottomOf="@+id/compraB_quantidade_text" />
+        <TextView
+            android:id="@+id/compraB_quantidade_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Quantidade"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/compraB_tipo_bilhete_text"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_checkBox_tipo_3" />
 
-    <Button
-        android:id="@+id/compraB_escolher_museus_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Escolher"
-        app:layout_constraintBaseline_toBaselineOf="@+id/compraB_museus_text"
-        app:layout_constraintEnd_toEndOf="@+id/compraB_consultar_precos_button" />
+        <TextView
+            android:id="@+id/compraB_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Total a Pagar"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/compraB_quantidade_text"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_quantidade_text" />
 
-    <EditText
-        android:id="@+id/compraB_data_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintBaseline_toBaselineOf="@+id/compraB_data_text"
-        app:layout_constraintEnd_toEndOf="@+id/compraB_escolher_museus_button" />
+        <EditText
+            android:id="@+id/compraB_data_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:maxLength="@integer/numberOfChars"
+            android:singleLine="false"
+            app:layout_constraintBaseline_toBaselineOf="@+id/compraB_data_text"
+            app:layout_constraintEnd_toEndOf="@+id/compraB_checkBox_museu_1" />
 
-    <Button
-        android:id="@+id/compraB_escolher_bilhete_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Escolher"
-        app:layout_constraintBaseline_toBaselineOf="@+id/compraB_tipo_bilhete_text"
-        app:layout_constraintEnd_toEndOf="@+id/compraB_data_input" />
+        <EditText
+            android:id="@+id/compraB_quantidade_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="@integer/quantityNumber"
+            app:layout_constraintBaseline_toBaselineOf="@+id/compraB_quantidade_text"
+            app:layout_constraintEnd_toEndOf="@+id/compraB_data_input" />
 
-    <EditText
-        android:id="@+id/compraB_quantidade_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBaseline_toBaselineOf="@+id/compraB_quantidade_text"
-        app:layout_constraintEnd_toEndOf="@+id/compraB_data_input" />
+        <TextView
+            android:id="@+id/compraB_valor_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/compraB_total_text"
+            app:layout_constraintEnd_toStartOf="@+id/compraB_simbolo_euro" />
 
-    <TextView
-        android:id="@+id/compraB_valor_total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0.00"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/compraB_total_text"
-        app:layout_constraintEnd_toStartOf="@+id/compraB_simbolo_euro" />
+        <Button
+            android:id="@+id/compraB_limpar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginBottom="32dp"
+            android:onClick="LimpaDados"
+            android:text="Limpar dados"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_total_text" />
 
-    <Button
-        android:id="@+id/compraB_limpar_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="32dp"
-        android:text="Limpar dados"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/compraB_pagar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="Pagar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/compraB_pagar_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:text="Pagar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/compraB_simbolo_euro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/compraB_total_text"
+            app:layout_constraintEnd_toEndOf="@+id/compraB_quantidade_input" />
 
-    <TextView
-        android:id="@+id/compraB_simbolo_euro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="€"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/compraB_total_text"
-        app:layout_constraintEnd_toEndOf="@+id/compraB_quantidade_input" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <CheckBox
+            android:id="@+id/compraB_checkBox_tipo_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Individual"
+            app:layout_constraintBaseline_toBaselineOf="@+id/compraB_tipo_bilhete_text"
+            app:layout_constraintEnd_toEndOf="@+id/compraB_data_input"
+            app:layout_constraintStart_toEndOf="@+id/compraB_tipo_bilhete_text" />
+
+        <CheckBox
+            android:id="@+id/compraB_checkBox_tipo_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="Para duas Pessoas"
+            app:layout_constraintEnd_toEndOf="@+id/compraB_checkBox_tipo_1"
+            app:layout_constraintStart_toStartOf="@+id/compraB_checkBox_tipo_1"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_checkBox_tipo_1" />
+
+        <CheckBox
+            android:id="@+id/compraB_checkBox_tipo_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="Familiar (4 pessoas)"
+            app:layout_constraintEnd_toEndOf="@+id/compraB_checkBox_tipo_2"
+            app:layout_constraintStart_toStartOf="@+id/compraB_checkBox_tipo_2"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_checkBox_tipo_2" />
+
+        <CheckBox
+            android:id="@+id/compraB_checkBox_museu_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Este museu"
+            app:layout_constraintBaseline_toBaselineOf="@+id/compraB_museus_text"
+            app:layout_constraintEnd_toEndOf="@+id/compraB_consultar_precos_button"
+            app:layout_constraintStart_toEndOf="@+id/compraB_tipo_bilhete_text" />
+
+        <CheckBox
+            android:id="@+id/compraB_checkBox_museu_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Aquele museu"
+            app:layout_constraintEnd_toEndOf="@+id/compraB_checkBox_museu_1"
+            app:layout_constraintStart_toStartOf="@+id/compraB_checkBox_museu_1"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_checkBox_museu_1" />
+
+        <CheckBox
+            android:id="@+id/compraB_checkBox_museu_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="Outro Museu"
+            app:layout_constraintEnd_toEndOf="@+id/compraB_checkBox_museu_2"
+            app:layout_constraintStart_toStartOf="@+id/compraB_checkBox_museu_2"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_checkBox_museu_2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
