@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".activities.TipoPagamentoActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:text="Escolha a forma de como pretende fazer o pagamento"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="141dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

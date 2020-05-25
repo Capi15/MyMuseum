@@ -7,4 +7,16 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="default_margin">16dp</dimen>
     <dimen name="default_card_margin">8dp</dimen>
+    <dimen name="spaced_margins">32dp</dimen>
+    <dimen name="title_size">24sp</dimen>
+    <dimen name="subtitle_size">18sp</dimen>
+    <dimen name="img_obra_size">350dp</dimen>
+    <dimen name="img_museu_size">200dp</dimen>
+    <dimen name="largura_img_museu">140dp</dimen>
+    <dimen name="altura_img_museu">120dp</dimen>
+    <dimen name="default_corpo_mensagens">200dp</dimen>
+    <dimen name="largura_img_categoria">140dp</dimen>
+    <dimen name="altura_img_categoria">120dp</dimen>
+    <dimen name="small_margins">8dp</dimen>
+    <dimen name="big_margins">50dp</dimen>
 </resources>

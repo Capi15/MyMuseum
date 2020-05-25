@@ -14,11 +14,11 @@
             android:id="@+id/compraB_consultar_precos_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginStart="@dimen/spaced_margins"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/spaced_margins"
             android:onClick="goToAllPrecos"
-            android:text="Consultar Preços"
+            android:text="@string/consultar_precos"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/compraB_tipo_bilhete_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_grupo_museus" />
@@ -27,11 +27,11 @@
             android:id="@+id/compraB_museus_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="@dimen/spaced_margins"
+            android:layout_marginTop="@dimen/default_margin"
             android:text="@string/museus"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="18sp"
+            android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,10 +39,10 @@
             android:id="@+id/compraB_data_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Data"
+            android:layout_marginTop="@dimen/big_margins"
+            android:text="@string/data"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="18sp"
+            android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="@+id/compraB_museus_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_consultar_precos_button" />
 
@@ -50,10 +50,10 @@
             android:id="@+id/compraB_tipo_bilhete_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Tipo de Bilhete"
+            android:layout_marginTop="@dimen/big_margins"
+            android:text="@string/tipo_de_bilhete"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="18sp"
+            android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="@+id/compraB_data_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_data_text" />
 
@@ -61,10 +61,10 @@
             android:id="@+id/compraB_quantidade_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Quantidade"
+            android:layout_marginTop="@dimen/big_margins"
+            android:text="@string/quantidade"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="18sp"
+            android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="@+id/compraB_tipo_bilhete_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_grupo_bilhetes" />
 
@@ -72,10 +72,10 @@
             android:id="@+id/compraB_total_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Total a Pagar"
+            android:layout_marginTop="@dimen/big_margins"
+            android:text="@string/total_a_pagar"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="18sp"
+            android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="@+id/compraB_quantidade_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_quantidade_text" />
 
@@ -104,9 +104,9 @@
             android:id="@+id/compraB_valor_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.00"
+            android:text="@string/valor_inicial"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="18sp"
+            android:textSize="@dimen/subtitle_size"
             android:textStyle="bold"
             app:layout_constraintBaseline_toBaselineOf="@+id/compraB_total_text"
             app:layout_constraintEnd_toStartOf="@+id/compraB_simbolo_euro" />
@@ -115,11 +115,11 @@
             android:id="@+id/compraB_limpar_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="@dimen/spaced_margins"
             android:layout_marginTop="@dimen/default_margin"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="@dimen/spaced_margins"
             android:onClick="LimpaDados"
-            android:text="Limpar dados"
+            android:text="@string/limpar_dados"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/compraB_total_text" />
@@ -128,9 +128,9 @@
             android:id="@+id/compraB_pagar_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="32dp"
-            android:text="Pagar"
+            android:layout_marginEnd="@dimen/spaced_margins"
+            android:layout_marginBottom="@dimen/spaced_margins"
+            android:text="@string/pagar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -138,9 +138,9 @@
             android:id="@+id/compraB_simbolo_euro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="€"
+            android:text="@string/simbolo_euro"
             android:textColor="@color/design_default_color_on_secondary"
-            android:textSize="18sp"
+            android:textSize="@dimen/subtitle_size"
             android:textStyle="bold"
             app:layout_constraintBaseline_toBaselineOf="@+id/compraB_total_text"
             app:layout_constraintEnd_toEndOf="@+id/compraB_quantidade_input" />
@@ -149,7 +149,7 @@
             android:id="@+id/compraB_grupo_museus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="@dimen/spaced_margins"
             app:layout_constraintEnd_toEndOf="@+id/compraB_consultar_precos_button"
             app:layout_constraintStart_toEndOf="@+id/compraB_tipo_bilhete_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_museus_text">
@@ -159,7 +159,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="checkButton_museu"
-                android:text="Este museu"
+                android:text="@string/nome_museu_1"
                 android:textAlignment="viewStart"
                 android:checked="true"/>
 
@@ -167,9 +167,9 @@
                 android:id="@+id/compraB_radiobutton_museu_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/default_margin"
                 android:onClick="checkButton_museu"
-                android:text="Aquele museu" />
+                android:text="@string/nome_museu_2" />
 
             <RadioButton
                 android:id="@+id/compraB_radiobutton_museu_3"
@@ -177,14 +177,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin"
                 android:onClick="checkButton_museu"
-                android:text="Outro Museu" />
+                android:text="@string/nome_museu_3" />
         </RadioGroup>
 
         <RadioGroup
             android:id="@+id/compraB_grupo_bilhetes"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="@dimen/spaced_margins"
             app:layout_constraintEnd_toEndOf="@+id/compraB_data_input"
             app:layout_constraintStart_toEndOf="@+id/compraB_tipo_bilhete_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_tipo_bilhete_text">
@@ -194,7 +194,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="checkButton_bilhete"
-                android:text="Individual"
+                android:text="@string/nome_tipo_bilhete_1"
                 android:checked="true"/>
 
             <RadioButton
@@ -203,7 +203,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin"
                 android:onClick="checkButton_bilhete"
-                android:text="Para duas Pessoas" />
+                android:text="@string/nome_tipo_bilhete_2" />
 
             <RadioButton
                 android:id="@+id/compraB_radiobutton_tipo_3"
@@ -211,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin"
                 android:onClick="checkButton_bilhete"
-                android:text="Familiar (4 pessoas)" />
+                android:text="@string/nome_tipo_bilhete_3" />
         </RadioGroup>
 
 
