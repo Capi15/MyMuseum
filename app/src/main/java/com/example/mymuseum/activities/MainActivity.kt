@@ -23,6 +23,8 @@ import kotlin.system.exitProcess
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+    var radioGroupMuseu: RadioGroup? = null
+    var radioGroupBilhete: RadioGroup? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
+
+        radioGroupMuseu = findViewById(R.id.compraB_grupo_museus)
+        radioGroupBilhete = findViewById(R.id.compraB_grupo_bilhetes)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf(
@@ -45,6 +50,18 @@ class MainActivity : AppCompatActivity() {
         ), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+    }
+
+    fun checkButton_museu (view: View) {
+        val radioId = radioGroupMuseu?.checkedRadioButtonId
+        radioGroupMuseu = radioId?.let { findViewById(it) }
+    }
+
+    fun checkButton_bilhete (view: View) {
+        val radioId = radioGroupBilhete?.checkedRadioButtonId
+        radioGroupBilhete = radioId?.let { findViewById(it) }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
