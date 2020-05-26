@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.perfil.PerfilFragment">
+    tools:context=".activities.PagamentoOnline_1_Activity">
 
     <TextView
         android:id="@+id/pagamento_online_fat_nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_margin"
-        android:layout_marginTop="@dimen/spaced_margins"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="@dimen/big_margins"
         android:text="@string/username_field"
         android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="@dimen/title_size"
+        android:textSize="@dimen/subtitle_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_fat_passos" />
 
     <TextView
         android:id="@+id/pagamento_online_fat_email"
@@ -28,7 +27,7 @@
         android:layout_marginTop="@dimen/spaced_margins"
         android:text="@string/user_email_field"
         android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="@dimen/title_size"
+        android:textSize="@dimen/subtitle_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/pagamento_online_fat_nome"
@@ -41,7 +40,7 @@
         android:layout_marginTop="@dimen/spaced_margins"
         android:text="@string/telemovel_field"
         android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="@dimen/title_size"
+        android:textSize="@dimen/subtitle_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/pagamento_online_fat_email"
@@ -54,7 +53,7 @@
         android:layout_marginTop="@dimen/spaced_margins"
         android:text="@string/morada_field"
         android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="@dimen/title_size"
+        android:textSize="@dimen/subtitle_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/pagamento_online_fat_telemovel"
@@ -65,82 +64,92 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spaced_margins"
-        android:text="@string/distrito_field"
+        android:text="Código Postal"
         android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="@dimen/title_size"
+        android:textSize="@dimen/subtitle_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/pagamento_online_fat_morada"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_online_fat_morada" />
 
-    <TextView
-        android:id="@+id/perfil_conselho"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spaced_margins"
-        android:text="@string/conselho_field"
-        android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="@dimen/title_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/pagamento_online_fat_codigo_postal"
-        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_fat_codigo_postal" />
 
-    <TextView
+    <EditText
         android:id="@+id/pagamento_online_fat_nome_text"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/default_margin"
-        android:text="@string/username"
-        android:textSize="@dimen/subtitle_size"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:hint="@string/username_field"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_fat_nome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/pagamento_online_fat_nome" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/pagamento_online_fat_email_text"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="@string/user_email"
-        android:textSize="@dimen/subtitle_size"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:hint="@string/user_email_field"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_fat_email"
-        app:layout_constraintEnd_toEndOf="@+id/pagamento_online_fat_nome_text" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_fat_email" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/pagamento_online_fat_telemovel_text"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="@string/text_telemovel"
-        android:textSize="@dimen/subtitle_size"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:hint="@string/telemovel_field"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_fat_telemovel"
-        app:layout_constraintEnd_toEndOf="@+id/textView10" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_fat_telemovel" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/pagamento_online_fat_morada_text"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="@string/text_morada"
-        android:textSize="@dimen/subtitle_size"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:hint="@string/morada_field"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_fat_morada"
-        app:layout_constraintEnd_toEndOf="@+id/textView11" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_fat_morada" />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/pagamento_online_fat_codigo_postal_text"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:text="@string/text_destrito"
-        android:textSize="@dimen/subtitle_size"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:hint="Código Postal"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_fat_codigo_postal"
-        app:layout_constraintEnd_toEndOf="@+id/textView12" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_fat_codigo_postal" />
 
-    <TextView
-        android:id="@+id/textView14"
+    <Button
+        android:id="@+id/pagamento_online_fat_button_continuar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_conselho"
-        android:textSize="@dimen/subtitle_size"
-        app:layout_constraintBaseline_toBaselineOf="@+id/perfil_conselho"
-        app:layout_constraintEnd_toEndOf="@+id/textView13" />
+        android:text="@string/continuar"
+        android:onClick="goToStep2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_fat_codigo_postal" />
+
+    <TextView
+        android:id="@+id/pagamento_online_fat_passos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Passo 1/3"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

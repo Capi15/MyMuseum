@@ -6,16 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".ui.mensagens.MensagensFragment">
 
-    <TextView
-        android:id="@+id/text_slideshow"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/mensagem_button_enviar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/small_margins"
-        android:layout_marginTop="@dimen/small_margins"
-        android:layout_marginEnd="@dimen/small_margins"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:text="Enviar"
+        android:onClick="enviaMensagem"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/mensagem_campo_envio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite aqui a sua mensagem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mensagem_adiciona_obras"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/mensagem_adiciona_obras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_add_img"
+        android:onClick="add_obras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mensagem_button_enviar" />
+
+    <TextView
+        android:id="@+id/mensagem_mensagens"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:gravity="bottom|right"
+        android:hint="Sem mensagens para mostrar"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toTopOf="@+id/mensagem_campo_envio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

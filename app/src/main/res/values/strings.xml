@@ -78,5 +78,9 @@
     <string name="registar">Registar</string>
     <string name="recebemos_mensagem">Recebemos a sua mensagem, obrigado!!!</string>
     <string name="continuar">Continuar</string>
+    <string name="online_text">Online</string>
+    <string name="local_fisico_text">Local Físico</string>
+    <string name="mensagem_tipo_pagamento">Escolha a forma de como pretende fazer o pagamento</string>
+    <string name="pagamento_pendente">Pagamento Pendente! \n\nObrigado por ter escolhido visitar um dos nossos museus, ficamos à sua espera</string>
 
 </resources>

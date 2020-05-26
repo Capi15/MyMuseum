@@ -55,7 +55,7 @@
             android:textColor="@color/design_default_color_on_secondary"
             android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="@+id/compraB_data_text"
-            app:layout_constraintTop_toBottomOf="@+id/compraB_data_text" />
+            app:layout_constraintTop_toBottomOf="@+id/datePicker" />
 
         <TextView
             android:id="@+id/compraB_quantidade_text"
@@ -79,16 +79,15 @@
             app:layout_constraintStart_toStartOf="@+id/compraB_quantidade_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_quantidade_text" />
 
-        <EditText
-            android:id="@+id/compraB_data_input"
+        <DatePicker
+
+            android:id="@+id/datePicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date"
-            android:maxLength="@integer/numberOfChars"
-            android:singleLine="false"
-            app:layout_constraintBaseline_toBaselineOf="@+id/compraB_data_text"
-            app:layout_constraintEnd_toEndOf="@+id/compraB_consultar_precos_button" />
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/compraB_data_text" />
 
         <EditText
             android:id="@+id/compraB_quantidade_input"
@@ -98,7 +97,7 @@
             android:inputType="number"
             android:maxLength="@integer/quantityNumber"
             app:layout_constraintBaseline_toBaselineOf="@+id/compraB_quantidade_text"
-            app:layout_constraintEnd_toEndOf="@+id/compraB_data_input" />
+            app:layout_constraintEnd_toEndOf="@+id/compraB_grupo_bilhetes" />
 
         <TextView
             android:id="@+id/compraB_valor_total"
@@ -131,6 +130,7 @@
             android:layout_marginEnd="@dimen/spaced_margins"
             android:layout_marginBottom="@dimen/spaced_margins"
             android:text="@string/pagar"
+            android:onClick="goToTipoPagamento"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -150,7 +150,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spaced_margins"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="@+id/compraB_consultar_precos_button"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/compraB_tipo_bilhete_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_museus_text">
 
@@ -158,10 +160,10 @@
                 android:id="@+id/compraB_radiobutton_museu_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:onClick="checkButton_museu"
                 android:text="@string/nome_museu_1"
-                android:textAlignment="viewStart"
-                android:checked="true"/>
+                android:textAlignment="viewStart" />
 
             <RadioButton
                 android:id="@+id/compraB_radiobutton_museu_2"
@@ -185,7 +187,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spaced_margins"
-            app:layout_constraintEnd_toEndOf="@+id/compraB_data_input"
+            app:layout_constraintEnd_toEndOf="@+id/datePicker"
             app:layout_constraintStart_toEndOf="@+id/compraB_tipo_bilhete_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_tipo_bilhete_text">
 
@@ -193,9 +195,9 @@
                 android:id="@+id/compraB_radiobutton_tipo_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:checked="true"
                 android:onClick="checkButton_bilhete"
-                android:text="@string/nome_tipo_bilhete_1"
-                android:checked="true"/>
+                android:text="@string/nome_tipo_bilhete_1" />
 
             <RadioButton
                 android:id="@+id/compraB_radiobutton_tipo_2"

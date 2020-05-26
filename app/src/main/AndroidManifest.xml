@@ -11,7 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.TipoPagamentoActivity"></activity>
+        <activity android:name=".activities.PagamentoOnline_3_2_Activity"></activity>
+        <activity
+            android:name=".activities.PagamentoOnline_3_1_Activity"
+            android:parentActivityName=".activities.PagamentoOnline_2_Activity" />
+        <activity
+            android:name=".activities.PagamentoOnline_2_Activity"
+            android:parentActivityName=".activities.PagamentoOnline_1_Activity" />
+        <activity android:name=".activities.PagamentoFisicoActivity" />
+        <activity
+            android:name=".activities.PagamentoOnline_1_Activity"
+            android:parentActivityName=".activities.TipoPagamentoActivity" />
+        <activity android:name=".activities.TipoPagamentoActivity" />
         <activity
             android:name=".activities.PrecosBilheteActivity"
             android:parentActivityName=".activities.MainActivity" />

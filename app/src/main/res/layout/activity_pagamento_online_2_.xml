@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PagamentoOnline_2_Activity">
+
+    <TextView
+        android:id="@+id/pagamento_online_tipo_passos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Passo 2/3"
+        android:onClick="goToStep3"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/pagamento_online_tipo_grupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/pagamento_online_tipo_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_tipo_passos">
+
+        <RadioButton
+            android:id="@+id/pagamento_online_tipo_radiobutton_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="checkButton_pagamento"
+            android:text="Multibanco" />
+
+        <RadioButton
+            android:id="@+id/pagamento_online_tipo_radiobutton_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:onClick="checkButton_pagamento"
+            android:text="Outro" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/pagamento_online_tipo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/big_margins"
+        android:text="@string/continuar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_tipo_grupo"
+        app:layout_constraintTop_toTopOf="@+id/pagamento_online_tipo_grupo"
+        app:srcCompat="@drawable/icon_multibanco" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/pagamento_online_tipo_grupo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_tipo_grupo"
+        app:srcCompat="@drawable/icon_gift_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

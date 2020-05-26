@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PagamentoFisicoActivity">
+
+    <TextView
+        android:id="@+id/paga_online_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:text="@string/pagamento_pendente"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/paga_online_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margins"
+        android:text="@string/continuar"
+        android:onClick="goBackToMainActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paga_online_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>
