@@ -13,9 +13,11 @@
         android:layout_marginStart="@dimen/spaced_margins"
         android:layout_marginTop="@dimen/spaced_margins"
         android:layout_marginEnd="@dimen/spaced_margins"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/roundimage"
         app:srcCompat="@android:drawable/ic_menu_report_image" />
 
     <TextView
@@ -24,8 +26,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
         android:text="@string/nome_obra"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/textColor"
         android:textSize="@dimen/title_size"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/obra_image"
@@ -38,7 +41,7 @@
         android:layout_marginTop="@dimen/spaced_margins"
         android:layout_marginBottom="@dimen/spaced_margins"
         android:text="@string/descricao"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/textColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/obra_image"

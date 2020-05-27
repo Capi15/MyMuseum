@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/loginActivityId"
     tools:context=".activities.LoginActivity">
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:text="@string/user_email_field"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
         android:text="@string/palavra_passe_field"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

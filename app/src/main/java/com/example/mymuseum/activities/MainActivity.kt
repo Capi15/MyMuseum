@@ -3,6 +3,7 @@ package com.example.mymuseum.activities
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Message
 import android.text.Editable
 import android.util.Log
 import android.view.Gravity
@@ -25,8 +26,14 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mymuseum.R
+import com.example.mymuseum.adapters.MensagensAdapter
+import com.example.mymuseum.classes.MyMessage
 import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
@@ -37,6 +44,17 @@ class MainActivity : AppCompatActivity() {
     var myText: TextView? = null
     private var myEditText: EditText? = null
     var button : Button? = null
+    var totalPagar: TextView? = null
+    private var myPagarEditText: EditText? = null
+
+    companion object{
+        var mensages: MutableList<MyMessage> = ArrayList()
+        val respostaMensagem = arrayOf(
+            "nice!",
+            "gostei muito!",
+            "manda mais!",
+            "sapnu puas")
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,12 +67,12 @@ class MainActivity : AppCompatActivity() {
         val navView: NavigationView = findViewById(R.id.nav_view)
         val navController = findNavController(R.id.nav_host_fragment)
 
+        //permite aceder a cada radioGroup
         radioGroupMuseu = findViewById(R.id.compraB_grupo_museus)
         radioGroupBilhete = findViewById(R.id.compraB_grupo_bilhetes)
 
 
         Log.i("log", button.toString())
-
 
 
         // Passing each menu ID as a set of Ids because each
@@ -69,40 +87,38 @@ class MainActivity : AppCompatActivity() {
         ), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        totalPagar = findViewById(R.id.compraB_valor_total)
+
     }
 
-    fun enviaMensagem(view: View) {
-        val random: Int = (0 .. 3).random()
-        myEditText = findViewById(R.id.mensagem_campo_envio)
-        myText = findViewById(R.id.mensagem_mensagens)
-        if(myEditText?.text.toString() ==  ""){
-            return
-        }
-        val append = (myEditText?.text).toString() + "\n\n"
-        myText?.setTextColor(Color.GREEN)
-        myText?.append(append)
-        myText?.append(respostaMensagem.get(random) + "\n\n")
-        myEditText?.setText("")
-    }
 
+
+    //adiciona obras às mensagens
     fun add_obras(view: View) {
         myEditText = findViewById(R.id.mensagem_campo_envio)
         myText = findViewById(R.id.mensagem_mensagens)
 
     }
 
+    //atualiza o valor do total
+    fun totalAPagar(){
+        totalPagar = findViewById(R.id.compraB_valor_total)
+        myPagarEditText = findViewById(R.id.compraB_quantidade_input)
+        if(totalPagar?.text != myPagarEditText?.text){
+            totalPagar?.setText(myPagarEditText?.text.toString())
 
-    val respostaMensagem = arrayOf(
-        "nice!",
-        "gostei muito!",
-        "manda mais!",
-        "sapnu puas")
+        }
+    }
 
+
+    //verifica os cliques do grupo de radioButtons dos museus
     fun checkButton_museu (view: View) {
         val radioId = radioGroupMuseu?.checkedRadioButtonId
         radioGroupMuseu = radioId?.let { findViewById(it) }
     }
 
+    //verifica os cliques do grupo de radioButtons dos bilhetes
     fun checkButton_bilhete (view: View) {
         val radioId = radioGroupBilhete?.checkedRadioButtonId
         radioGroupBilhete = radioId?.let { findViewById(it) }
@@ -119,6 +135,7 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+    //permite usar o menu de items, neste caso é usado para sair da aplicação
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.action_sair->{
@@ -130,20 +147,25 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //entra na atividade das categorias através dos cards dos museus
     fun goToCategoriaFromCard(view: View) {
         val intent = Intent(this, CategoriaActivity::class.java)
         startActivity(intent)
     }
 
+    //entra na atividade dos preços dos museus
     fun goToAllPrecos(view: View) {
         val intent = Intent(this, PrecosBilheteActivity::class.java)
         startActivity(intent)
     }
 
+    //limpa os dados de todos os campos no fragmento comprar bilhete
     fun LimpaDados(view: View) {
-
+        myPagarEditText = findViewById(R.id.compraB_quantidade_input)
+        myPagarEditText?.setText("")
     }
 
+    //inicia a atividade do tipo de pagamento
     fun goToTipoPagamento(view: View) {
         val intent = Intent(this, TipoPagamentoActivity::class.java)
         startActivity(intent)

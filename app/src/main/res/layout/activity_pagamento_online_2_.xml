@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/pagamentoOnline_2Id"
     tools:context=".activities.PagamentoOnline_2_Activity">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_marginTop="@dimen/default_margin"
         android:text="Passo 2/3"
         android:onClick="goToStep3"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/title_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

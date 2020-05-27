@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/pagamentoOnline_3_2_ActivityId"
     tools:context=".activities.PagamentoOnline_3_2_Activity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

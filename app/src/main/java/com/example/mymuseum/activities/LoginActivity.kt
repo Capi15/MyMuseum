@@ -13,6 +13,8 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import com.example.mymuseum.R
 import com.example.mymuseum.retrofit.RetrofitClientInstance
 import com.example.mymuseum.retrofit.User
@@ -37,6 +39,10 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        val currentLayout =
+            findViewById<View>(R.id.loginActivityId) as ConstraintLayout
+        //define a cor do Layout
+        currentLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.catMusBack))
 
         btn_login = findViewById(R.id.button_login_login)
         et_email = findViewById<EditText>(R.id.editText_login_nome)

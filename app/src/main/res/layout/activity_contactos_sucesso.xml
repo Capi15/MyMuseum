@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/contactosSucessoId"
     tools:context=".activities.ContactosSucesso">
 
     <TextView
@@ -15,7 +16,7 @@
         android:layout_marginEnd="@dimen/spaced_margins"
         android:text="@string/recebemos_mensagem"
         android:textAlignment="center"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

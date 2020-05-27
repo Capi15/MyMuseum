@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -25,6 +27,8 @@ class ContactosFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_contactos, container, false)
         val mensagem: EditText = root.findViewById(R.id.contactos_mensagem_corpo)
+        root.setBackgroundColor(ContextCompat.getColor(this.requireContext(), R.color.catMusBack))
+        //implementação do click de um botão, para instanciar uma nova atividade
         root.contactos_button.setOnClickListener {
             val intent = Intent (requireActivity().applicationContext, ContactosSucesso::class.java)
             startActivity(intent)

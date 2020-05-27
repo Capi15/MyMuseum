@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.row_obra.view.*
 
 class ObraAdapter : RecyclerView.Adapter<CustomViewHolder>(){
 
-    //imagem default
+    //array de imagens de obras
     val intArray = intArrayOf(
         R.drawable.ac,
         R.drawable.at,
@@ -17,15 +17,15 @@ class ObraAdapter : RecyclerView.Adapter<CustomViewHolder>(){
         R.drawable.mona
     )
 
-    //array de imagens 2
+    //array ddo titulo das obras
     val stringTitulo = arrayOf(
         "Colagens Abstratas",
         "Rui Sanches",
         "Coração de Viana",
         "Monalisa")
 
-    val stringDescricao = arrayOf("observe as noças perças mais antigas",
-        "Varios tipos de Colagens crião novas formas",
+    val stringDescricao = arrayOf(
+        "Vários tipos de Colagens criam novas formas",
         "Pintura com tinta da china",
         "O seu coração vale ouro",
         "O quadro que o Observa")
@@ -37,18 +37,18 @@ class ObraAdapter : RecyclerView.Adapter<CustomViewHolder>(){
         return CustomViewHolder(cellForRow)
     }
 
-    //o tamanho deste adaptador é igual ao tamanho de imagens em qualquer um dos arrays
+    //o tamanho deste adaptador é igual ao tamanho do array do titulo das obras
     override fun getItemCount(): Int {
         return stringTitulo.size
     }
 
     //pupola cada celula costumizada com elementos de cada um dos arrays
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        //a cada posicao vai ser inserida uma imagem
+        //a cada posicao vai ser inserido array
         val image = intArray.get(position)
         val titulo = stringTitulo.get(position)
         val descricao = stringDescricao.get(position)
-        //é associada a imagem do array ao seu recurso, neste caso uma imageView
+        //é associado cada array ao seu recurso
         holder?.view?.obra_image?.setImageResource(image)
         holder?.view?.obra_titulo.setText(titulo)
         holder?.view?.obra_descricao.setText(descricao)

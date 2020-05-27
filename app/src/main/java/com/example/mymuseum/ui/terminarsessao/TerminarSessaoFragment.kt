@@ -19,7 +19,9 @@ class TerminarSessaoFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_terminar_sessao, container, false)
         val intent = Intent(context, LoginActivity::class.java)
         startActivity(intent)
+        //remove o ultimo fragmento empilhado na stack
         activity?.getSupportFragmentManager()?.popBackStack()
+        //termina a atividade
         getActivity()?.finish()
         return root
     }

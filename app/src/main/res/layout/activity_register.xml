@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/registerID"
     tools:context=".activities.RegisterActivity">
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/big_margins"
         android:text="@string/nome_field"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintStart_toStartOf="@+id/editText_resgister_nome"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
         android:text="@string/user_email_field"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -60,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
         android:text="@string/palavra_passe_field"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -85,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
         android:text="@string/comfirma_passe_field"
-        android:textColor="@color/design_default_color_on_secondary"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintStart_toStartOf="@+id/editText_resgister_pass"
         app:layout_constraintTop_toBottomOf="@+id/editText_resgister_pass"/>

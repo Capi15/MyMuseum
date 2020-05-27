@@ -20,6 +20,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Digite aqui a sua mensagem"
+        android:textColor="@color/minhaMensagem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/mensagem_adiciona_obras"
         app:layout_constraintStart_toStartOf="parent" />
@@ -33,18 +34,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/mensagem_button_enviar" />
 
-    <TextView
-        android:id="@+id/mensagem_mensagens"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mensagens_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/default_margin"
-        android:layout_marginEnd="@dimen/default_margin"
-        android:layout_marginBottom="@dimen/default_margin"
-        android:gravity="bottom|right"
-        android:hint="Sem mensagens para mostrar"
-        android:textAlignment="gravity"
         app:layout_constraintBottom_toTopOf="@+id/mensagem_campo_envio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

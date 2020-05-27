@@ -9,9 +9,10 @@ import kotlinx.android.synthetic.main.row_obra.view.*
 
 class PrecoBilheteAdapter : RecyclerView.Adapter<CustomViewHolder>(){
 
-    //imagem default
-    val intArray = intArrayOf(R.drawable.ac, R.drawable.at, R.drawable.cora)
+    //array com as imagens dos museus
+    val intArray = intArrayOf(R.drawable.portugal, R.drawable.espanha, R.drawable.alemanha)
 
+    //Array com os precos de cada dia da semana
     val doubleArrayPreco1 = doubleArrayOf(1.2, 1.4, 1.3)
 
     val doubleArrayPreco2 = doubleArrayOf(2.2, 2.4, 2.3)
@@ -26,7 +27,7 @@ class PrecoBilheteAdapter : RecyclerView.Adapter<CustomViewHolder>(){
 
     val doubleArrayPreco7 = doubleArrayOf(3.3, 2.2, 1.1)
 
-    //array de imagens 2
+    //array do Nome dos museus
     val stringTitulo = arrayOf("Este museu", "Aquele museu", "Outro museu")
 
     // associa um layout personalizado a cada linha(celula) do adaptador
@@ -36,14 +37,14 @@ class PrecoBilheteAdapter : RecyclerView.Adapter<CustomViewHolder>(){
         return CustomViewHolder(cellForRow)
     }
 
-    //o tamanho deste adaptador é igual ao tamanho de imagens em qualquer um dos arrays
+    //o tamanho deste adaptador é igual ao tamanho do array do titulo dos museus
     override fun getItemCount(): Int {
         return stringTitulo.size
     }
 
     //pupola cada celula costumizada com elementos de cada um dos arrays
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        //a cada posicao vai ser inserida uma imagem
+        //a cada posicao vai ser inserido array
         val image = intArray.get(position)
         val titulo = stringTitulo.get(position)
         val preco1 = doubleArrayPreco1.get(position)
@@ -53,7 +54,7 @@ class PrecoBilheteAdapter : RecyclerView.Adapter<CustomViewHolder>(){
         val preco5 = doubleArrayPreco5.get(position)
         val preco6 = doubleArrayPreco6.get(position)
         val preco7 = doubleArrayPreco7.get(position)
-        //é associada a imagem do array ao seu recurso, neste caso uma imageView
+        //é associado cada array ao seu recurso
         holder?.view?.preco_museus_image?.setImageResource(image)
         holder?.view?.preco_museus_nome_museu.setText(titulo)
         holder?.view?.preco_museus_valor_1.setText(preco1.toString())

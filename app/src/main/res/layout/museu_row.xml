@@ -27,6 +27,7 @@
         android:layout_height="@dimen/altura_img_museu"
         android:layout_marginStart="@dimen/default_card_margin"
         android:layout_marginTop="@dimen/default_card_margin"
+        android:scaleType="centerCrop"
         android:layout_marginBottom="@dimen/default_card_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
