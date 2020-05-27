@@ -19,7 +19,7 @@ class MuseuAdapter : RecyclerView.Adapter<CustomViewHolder>(){
     )
 
     //arrays de strings remtentes aos museus
-    val stringTitulo = arrayOf("Franca", "Portugal", "Espanha", "China", "Alemanha")
+    val stringTitulo = arrayOf("França", "Portugal", "Espanha", "China", "Alemanha")
     val stringDescricao = arrayOf("O melhor museu Europeu", "Museus do minho", "Venha Visitar-nos", "Melhor museu Asiatico", "Segundo melhor museu Europeu")
 
     // associa um layout personalizado a cada linha(celula) do adaptador

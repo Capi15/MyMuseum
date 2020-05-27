@@ -12,7 +12,7 @@
         android:id="@+id/pagamento_online_fat_nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginStart="@dimen/spaced_margins"
         android:layout_marginTop="@dimen/spaced_margins"
         android:text="@string/username_field"
         android:textColor="@color/GlobalTextColor"
@@ -91,8 +91,9 @@
         android:id="@+id/pagamento_online_fat_nome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/spaced_margins"
         android:text="@string/username"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_fat_nome"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,6 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/user_email"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_fat_email"
         app:layout_constraintEnd_toEndOf="@+id/pagamento_online_fat_nome_text" />
@@ -113,6 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_telemovel"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_fat_telemovel"
         app:layout_constraintEnd_toEndOf="@+id/textView10" />
@@ -122,6 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_morada"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_fat_morada"
         app:layout_constraintEnd_toEndOf="@+id/textView11" />
@@ -131,6 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_destrito"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_fat_codigo_postal"
         app:layout_constraintEnd_toEndOf="@+id/textView12" />
@@ -140,6 +145,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_conselho"
+        android:textColor="@color/GlobalTextColor"
         android:textSize="@dimen/subtitle_size"
         app:layout_constraintBaseline_toBaselineOf="@+id/perfil_conselho"
         app:layout_constraintEnd_toEndOf="@+id/textView13" />

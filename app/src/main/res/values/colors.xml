@@ -9,6 +9,7 @@
     <color name="obrasBack">#373839</color>
     <color name="textColor">#03A9F4</color>
     <color name="GlobalTextColor">#FFFFFF</color>
+    <color name="outraCorTexto">#FAE957</color>
 
 
 </resources>
