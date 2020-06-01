@@ -30,7 +30,7 @@
             android:layout_marginStart="@dimen/spaced_margins"
             android:layout_marginTop="@dimen/default_margin"
             android:text="@string/museus"
-            android:textColor="@color/GlobalTextColor"
+            android:textColor="@color/newCorTexto"
             android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_margins"
             android:text="@string/data"
-            android:textColor="@color/GlobalTextColor"
+            android:textColor="@color/newCorTexto"
             android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="@+id/compraB_museus_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_consultar_precos_button" />
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_margins"
             android:text="@string/tipo_de_bilhete"
-            android:textColor="@color/GlobalTextColor"
+            android:textColor="@color/newCorTexto"
             android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="@+id/compraB_data_text"
             app:layout_constraintTop_toBottomOf="@+id/datePicker" />
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_margins"
             android:text="@string/quantidade"
-            android:textColor="@color/GlobalTextColor"
+            android:textColor="@color/newCorTexto"
             android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="@+id/compraB_tipo_bilhete_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_grupo_bilhetes" />
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/big_margins"
             android:text="@string/total_a_pagar"
-            android:textColor="@color/GlobalTextColor"
+            android:textColor="@color/newCorTexto"
             android:textSize="@dimen/subtitle_size"
             app:layout_constraintStart_toStartOf="@+id/compraB_quantidade_text"
             app:layout_constraintTop_toBottomOf="@+id/compraB_quantidade_text" />
@@ -84,7 +84,7 @@
             android:id="@+id/datePicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/GlobalTextColor"
+            android:backgroundTint="@color/newCorTexto"
             android:layout_marginTop="@dimen/default_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/valor_inicial"
-            android:textColor="@color/GlobalTextColor"
+            android:textColor="@color/newCorTexto"
             android:textSize="@dimen/subtitle_size"
             android:textStyle="bold"
             app:layout_constraintBaseline_toBaselineOf="@+id/compraB_total_text"
@@ -140,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/simbolo_euro"
-            android:textColor="@color/GlobalTextColor"
+            android:textColor="@color/newCorTexto"
             android:textSize="@dimen/subtitle_size"
             android:textStyle="bold"
             app:layout_constraintBaseline_toBaselineOf="@+id/compraB_total_text"
@@ -163,7 +163,6 @@
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:onClick="checkButton_museu"
-                android:textColor="@color/GlobalTextColor"
                 android:text="@string/nome_museu_1"
                 android:textAlignment="viewStart" />
 
@@ -172,7 +171,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin"
-                android:textColor="@color/GlobalTextColor"
                 android:onClick="checkButton_museu"
                 android:text="@string/nome_museu_2" />
 
@@ -180,7 +178,6 @@
                 android:id="@+id/compraB_radiobutton_museu_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/GlobalTextColor"
                 android:layout_marginTop="@dimen/default_margin"
                 android:onClick="checkButton_museu"
                 android:text="@string/nome_museu_3" />
@@ -200,7 +197,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:textColor="@color/GlobalTextColor"
                 android:onClick="checkButton_bilhete"
                 android:text="@string/nome_tipo_bilhete_1" />
 
@@ -208,7 +204,6 @@
                 android:id="@+id/compraB_radiobutton_tipo_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/GlobalTextColor"
                 android:layout_marginTop="@dimen/default_margin"
                 android:onClick="checkButton_bilhete"
                 android:text="@string/nome_tipo_bilhete_2" />
@@ -218,7 +213,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin"
-                android:textColor="@color/GlobalTextColor"
                 android:onClick="checkButton_bilhete"
                 android:text="@string/nome_tipo_bilhete_3" />
         </RadioGroup>

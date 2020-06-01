@@ -16,7 +16,7 @@ class PagamentoOnline_1_Activity : AppCompatActivity() {
         val currentLayout =
             findViewById<View>(R.id.pagamentoOnline_1Id) as ConstraintLayout
         //define a cor do Layout
-        currentLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.catMusBack))
+        currentLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.newBackground))
     }
 
     fun goToStep2(view: View) {

@@ -23,7 +23,8 @@
             android:name=".activities.PagamentoOnline_1_Activity"
             android:parentActivityName=".activities.TipoPagamentoActivity" />
         <activity android:name=".activities.TipoPagamentoActivity"
-            android:parentActivityName=".activities.MainActivity"/>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".activities.PrecosBilheteActivity"
             android:parentActivityName=".activities.MainActivity" />

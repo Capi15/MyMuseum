@@ -34,7 +34,7 @@ class MensagensFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_mensagens, container, false)
-        root.setBackgroundColor(ContextCompat.getColor(this.requireContext(), R.color.catMusBack))
+        root.setBackgroundColor(ContextCompat.getColor(this.requireContext(), R.color.newBackground))
         //é criado um layout manager para este fragmento
         root.mensagens_recycler.layoutManager = LinearLayoutManager(activity)
         //depois é chamado o adaptador customizado

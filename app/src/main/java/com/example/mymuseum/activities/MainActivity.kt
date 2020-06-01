@@ -169,7 +169,6 @@ class MainActivity : AppCompatActivity() {
     fun goToTipoPagamento(view: View) {
         val intent = Intent(this, TipoPagamentoActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
 

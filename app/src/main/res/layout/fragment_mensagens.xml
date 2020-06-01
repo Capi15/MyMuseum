@@ -20,7 +20,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Digite aqui a sua mensagem"
-        android:textColor="@color/minhaMensagem"
+        android:textColor="@color/newCorTexto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/mensagem_adiciona_obras"
         app:layout_constraintStart_toStartOf="parent" />
@@ -38,6 +38,7 @@
         android:id="@+id/mensagens_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/catMusBack"
         app:layout_constraintBottom_toTopOf="@+id/mensagem_campo_envio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
