@@ -7,4 +7,165 @@
     android:id="@+id/pagamentoOnline_3_2_ActivityId"
     tools:context=".activities.PagamentoOnline_3_2_Activity">
 
+    <TextView
+        android:id="@+id/pagamento_online_outros_tipo_passos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Passo 3/3"
+        android:textColor="@color/newCorTexto"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pagamento_online_outros_ncartao_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="32dp"
+        android:text="Nº do Cartão"
+        android:textColor="@color/newCorTexto"
+        android:textSize="@dimen/subtitle_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_outros_nomecartao_text" />
+
+    <TextView
+        android:id="@+id/pagamento_online_outros_nomecartao_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="@dimen/spaced_margins"
+        android:text="Nome do Cartão"
+        android:textColor="@color/newCorTexto"
+        android:textSize="@dimen/subtitle_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_cartao" />
+
+    <TextView
+        android:id="@+id/pagamento_online_outros_validade_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="32dp"
+        android:text="validade"
+        android:textColor="@color/newCorTexto"
+        android:textSize="@dimen/subtitle_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_outros_ncartao_text" />
+
+    <TextView
+        android:id="@+id/pagamento_online_outros_cvv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:text="CVV"
+        android:textColor="@color/newCorTexto"
+        android:textSize="@dimen/subtitle_size"
+        app:layout_constraintEnd_toStartOf="@+id/pagamento_online_outros_cvv_edit"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_outros_validade_edit"
+        app:layout_constraintTop_toTopOf="@+id/pagamento_online_outros_validade_text" />
+
+    <TextView
+        android:id="@+id/pagamento_online_outros_valor_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="@dimen/spaced_margins"
+        android:text="Valor"
+        android:textColor="@color/newCorTexto"
+        android:textSize="@dimen/subtitle_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_outros_cvv_text" />
+
+    <EditText
+        android:id="@+id/pagamento_online_outros_validade_edit"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:inputType="date"
+        android:maxLength="@integer/validade"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_outros_validade_text"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_outros_validade_text" />
+
+    <EditText
+        android:id="@+id/pagamento_online_outros_cvv_edit"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:inputType="number"
+        android:maxLength="@integer/cvv"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_outros_cvv_text"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/pagamento_online_outros_ncartao_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_outros_ncartao_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/pagamento_online_outros_nomecartao_edit" />
+
+    <EditText
+        android:id="@+id/pagamento_online_outros_nomecartao_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:outlineProvider="none"
+        android:singleLine="false"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_outros_nomecartao_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_outros_nomecartao_text" />
+
+    <TextView
+        android:id="@+id/pagamento_online_outros_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textColor="@color/newCorTexto"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_outros_valor_text"
+        app:layout_constraintEnd_toStartOf="@+id/pagamento_online_outros_euro"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_outros_valor_text" />
+
+    <TextView
+        android:id="@+id/pagamento_online_outros_euro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/simbolo_euro"
+        android:textColor="@color/newCorTexto"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_outros_valor_text"
+        app:layout_constraintEnd_toEndOf="@+id/pagamento_online_outros_cvv_edit"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_outros_valor_text" />
+
+    <Button
+        android:id="@+id/pagamento_online_outros_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spaced_margins"
+        android:text="Concluir Pagamento"
+        android:onClick="concluiPagamento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_outros_valor_text"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/img_cartao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spaced_margins"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_outros_tipo_passos"
+        app:srcCompat="@drawable/icon_multibanco2"
+        tools:layout_editor_absoluteX="158dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

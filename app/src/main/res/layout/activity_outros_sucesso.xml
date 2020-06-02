@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/outrosSucessoActivityId"
+    tools:context=".activities.OutrosSucessoActivity">
+
+    <TextView
+        android:id="@+id/outros_sucesso_mensagem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:text="O seu pagamento foi concluido com sucesso!!!"
+        android:textAlignment="center"
+        android:textColor="@color/GlobalTextColor"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/outros_sucesso_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continuar"
+        android:onClick="goBackToHome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outros_sucesso_mensagem" />
+</androidx.constraintlayout.widget.ConstraintLayout>

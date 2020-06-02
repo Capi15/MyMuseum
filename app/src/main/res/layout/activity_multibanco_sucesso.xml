@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MultibancoSucessoActivity"
+    android:id="@+id/multibancoSucessoActivityId">
+
+    <TextView
+        android:id="@+id/multibanco_sucesso_mensagem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:text="O seu pagamento ficou no estado pendente, por favor termine o pagamento numa caixa de multibanco mais próxima!!!"
+        android:textAlignment="center"
+        android:textColor="@color/GlobalTextColor"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/multibanco_sucesso_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continuar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multibanco_sucesso_mensagem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

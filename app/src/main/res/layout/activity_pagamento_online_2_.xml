@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_margin"
         android:text="Passo 2/3"
-        android:onClick="goToStep3"
         android:textColor="@color/newCorTexto"
         android:textSize="@dimen/title_size"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +34,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:onClick="checkButton_pagamento"
             android:text="Multibanco" />
 
         <RadioButton
@@ -43,7 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin"
-            android:onClick="checkButton_pagamento"
             android:text="Outro" />
     </RadioGroup>
 
@@ -53,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/big_margins"
         android:text="@string/continuar"
+        android:onClick="goToStep3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

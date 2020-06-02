@@ -6,5 +6,116 @@
     android:layout_height="match_parent"
     android:id="@+id/pagamentoOnline_3_1_ActivityId"
     tools:context=".activities.PagamentoOnline_3_1_Activity">
+    <TextView
+        android:id="@+id/pagamento_online_multibanco_tipo_passos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="Passo 3/3"
+        android:textColor="@color/newCorTexto"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pagamento_online_multibanco_ncartao_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="150dp"
+        android:text="Entidade"
+        android:textColor="@color/newCorTexto"
+        android:textSize="@dimen/subtitle_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_multibanco_tipo_passos" />
+
+    <TextView
+        android:id="@+id/pagamento_online_multibanco_validade_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="32dp"
+        android:text="Referência"
+        android:textColor="@color/newCorTexto"
+        android:textSize="@dimen/subtitle_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_multibanco_ncartao_text" />
+
+    <TextView
+        android:id="@+id/pagamento_online_multibanco_valor_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginTop="@dimen/spaced_margins"
+        android:text="Valor"
+        android:textColor="@color/newCorTexto"
+        android:textSize="@dimen/subtitle_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_multibanco_validade_text" />
+
+    <TextView
+        android:id="@+id/pagamento_online_multibanco_ncartao_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:maxLength="@integer/validade"
+        android:text="17314"
+        android:textColor="@color/newCorTexto"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_multibanco_ncartao_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_multibanco_ncartao_text" />
+
+    <TextView
+        android:id="@+id/pagamento_online_multibanco_ncartao_edit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spaced_margins"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:maxLength="@integer/referencia"
+        android:text="160932592"
+        android:textColor="@color/newCorTexto"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_multibanco_validade_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_multibanco_ncartao_text" />
+
+    <TextView
+        android:id="@+id/pagamento_online_multibanco_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textColor="@color/newCorTexto"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_multibanco_valor_text"
+        app:layout_constraintEnd_toStartOf="@+id/pagamento_online_multibanco_euro"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_multibanco_valor_text" />
+
+    <TextView
+        android:id="@+id/pagamento_online_multibanco_euro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spaced_margins"
+        android:text="@string/simbolo_euro"
+        android:textColor="@color/newCorTexto"
+        app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_multibanco_valor_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pagamento_online_multibanco_valor_text" />
+
+    <Button
+        android:id="@+id/pagamento_online_multibanco_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spaced_margins"
+        android:text="Concluir Pagamento"
+        android:onClick="concluiPagamento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagamento_online_outros_valor_text"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,4 +2,8 @@
 <resources>
     <integer name="numberOfChars">10</integer>
     <integer name="quantityNumber">2</integer>
+    <integer name="validade">5</integer>
+    <integer name="cvv">3</integer>
+    <integer name="referencia">9</integer>
+    <integer name="telemovel">9</integer>
 </resources>
