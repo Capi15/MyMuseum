@@ -6,4 +6,5 @@
     <integer name="cvv">3</integer>
     <integer name="referencia">9</integer>
     <integer name="telemovel">9</integer>
+    <integer name="n_cartao">16</integer>
 </resources>

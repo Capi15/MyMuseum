@@ -14,7 +14,7 @@
         android:layout_marginStart="@dimen/spaced_margins"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="@dimen/spaced_margins"
-        android:text="O seu pagamento foi concluido com sucesso!!!"
+        android:text="@string/outros_sucesso"
         android:textAlignment="center"
         android:textColor="@color/GlobalTextColor"
         android:textSize="30sp"

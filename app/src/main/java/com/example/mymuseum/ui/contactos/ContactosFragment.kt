@@ -27,7 +27,7 @@ class ContactosFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_contactos, container, false)
         val mensagem: EditText = root.findViewById(R.id.contactos_mensagem_corpo)
-        root.setBackgroundColor(ContextCompat.getColor(this.requireContext(), R.color.catMusBack))
+        root.setBackgroundColor(ContextCompat.getColor(this.requireContext(), R.color.newBackground))
         //implementação do click de um botão, para instanciar uma nova atividade
         root.contactos_button.setOnClickListener {
             val intent = Intent (requireActivity().applicationContext, ContactosSucesso::class.java)

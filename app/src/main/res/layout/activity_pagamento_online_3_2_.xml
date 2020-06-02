@@ -106,6 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/spaced_margins"
         android:inputType="number"
+        android:maxLength="@integer/n_cartao"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_outros_ncartao_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -117,6 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spaced_margins"
         android:layout_marginEnd="@dimen/spaced_margins"
+        android:inputType="textPersonName"
         android:outlineProvider="none"
         android:singleLine="false"
         app:layout_constraintBaseline_toBaselineOf="@+id/pagamento_online_outros_nomecartao_text"
@@ -164,8 +166,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spaced_margins"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_online_outros_tipo_passos"
-        app:srcCompat="@drawable/icon_multibanco2"
-        tools:layout_editor_absoluteX="158dp" />
+        app:srcCompat="@drawable/icon_multibanco2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

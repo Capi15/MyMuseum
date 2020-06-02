@@ -82,5 +82,7 @@
     <string name="local_fisico_text">Local Físico</string>
     <string name="mensagem_tipo_pagamento">Escolha a forma de como pretende fazer o pagamento</string>
     <string name="pagamento_pendente">Pagamento Pendente! \n\nObrigado por ter escolhido visitar um dos nossos museus, ficamos à sua espera</string>
+    <string name="multibanco_sucesso">O seu pagamento ficou no estado pendente, por favor termine o pagamento numa caixa de multibanco mais próxima!!!</string>
+    <string name="outros_sucesso">O seu pagamento foi concluido com sucesso!!!</string>
 
 </resources>
