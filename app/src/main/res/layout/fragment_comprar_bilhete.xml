@@ -130,7 +130,6 @@
             android:layout_marginEnd="@dimen/spaced_margins"
             android:layout_marginBottom="@dimen/spaced_margins"
             android:text="@string/pagar"
-            android:onClick="goToTipoPagamento"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

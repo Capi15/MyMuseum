@@ -123,12 +123,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    //inicia a atividade do tipo de pagamento
-    fun goToTipoPagamento(view: View) {
-        val intent = Intent(this, TipoPagamentoActivity::class.java)
-        startActivity(intent)
-    }
-
 
 
 

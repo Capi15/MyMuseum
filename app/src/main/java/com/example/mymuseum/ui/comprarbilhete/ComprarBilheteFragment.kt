@@ -1,5 +1,6 @@
 package com.example.mymuseum.ui.comprarbilhete
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,6 +11,7 @@ import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.mymuseum.R
+import com.example.mymuseum.activities.TipoPagamentoActivity
 
 
 class ComprarBilheteFragment : Fragment() {
@@ -24,6 +26,7 @@ class ComprarBilheteFragment : Fragment() {
 
     lateinit var myQuantidadeEditText: EditText
     private lateinit var limpar: Button
+    private lateinit var pagar: Button
     private lateinit var radioGroup1: RadioGroup
     private lateinit var radioGroup2: RadioGroup
     private lateinit var radioM1: RadioButton
@@ -54,6 +57,7 @@ class ComprarBilheteFragment : Fragment() {
         radioB1 = root.findViewById(R.id.compraB_radiobutton_tipo_1)
         radioB2 = root.findViewById(R.id.compraB_radiobutton_tipo_2)
         radioB3 = root.findViewById(R.id.compraB_radiobutton_tipo_3)
+        pagar = root.findViewById(R.id.compraB_pagar_button)
 
         radioM1.isChecked
         radioB1.isChecked
@@ -74,7 +78,6 @@ class ComprarBilheteFragment : Fragment() {
                     0.00
                 }
             }
-            Toast.makeText(activity, dblMuseu.toString(), Toast.LENGTH_SHORT).show()
         }
 
         radioGroup2.setOnCheckedChangeListener{ radioGroup: RadioGroup, checkedId: Int ->
@@ -93,7 +96,6 @@ class ComprarBilheteFragment : Fragment() {
                     dblBilhete = 0.00
                 }
             }
-            Toast.makeText(activity, dblBilhete.toString(), Toast.LENGTH_SHORT).show()
         }
 
         limpar.setOnClickListener {
@@ -110,7 +112,6 @@ class ComprarBilheteFragment : Fragment() {
                 if(quantidade.isNotEmpty()){
                     dblPagar = quantidade.toDouble()
                     result = dblPagar * (dblBilhete + dblMuseu)
-                    Toast.makeText(activity, result.toString(), Toast.LENGTH_SHORT).show()
                 }else{
                     radioM1.isChecked
                     radioB1.isChecked
@@ -123,6 +124,15 @@ class ComprarBilheteFragment : Fragment() {
             override fun afterTextChanged(s: Editable) {
             }
         })
+
+        pagar.setOnClickListener{
+            if(strPagar == ""){
+                Toast.makeText(activity, "Por favor insira uma quantidade válida", Toast.LENGTH_SHORT).show()
+            }else{
+                val intent = Intent(activity, TipoPagamentoActivity::class.java)
+                startActivity(intent)
+            }
+        }
         return root
     }
 }
