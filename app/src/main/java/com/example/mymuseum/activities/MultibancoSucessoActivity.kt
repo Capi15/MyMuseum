@@ -17,7 +17,6 @@ import com.example.mymuseum.ui.comprarbilhete.ComprarBilheteFragment.Companion.M
 class MultibancoSucessoActivity : AppCompatActivity() {
 
     private lateinit var button : Button
-    private lateinit var textValor: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,12 +27,7 @@ class MultibancoSucessoActivity : AppCompatActivity() {
         //define a cor do Layout
         currentLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.catMusBack))
         button = findViewById(R.id.multibanco_sucesso_button)
-        textValor = findViewById(R.id.pagamento_online_multibanco_valor)
 
-        val preferences =
-            getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE)
-        val valor = preferences.getString("VALOR", "")
-        textValor.text = valor
 
         button.setOnClickListener{
             finish()
