@@ -1,6 +1,8 @@
 package com.example.mymuseum.ui.comprarbilhete
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -14,8 +16,12 @@ import com.example.mymuseum.R
 import com.example.mymuseum.activities.TipoPagamentoActivity
 
 
-class ComprarBilheteFragment : Fragment() {
+class ComprarBilheteFragment : Fragment(){
 
+    companion object{
+        val MyPREFERENCES = "MyPrefs"
+    }
+    val VALOR = "valor"
     var totalPagar: TextView? = null
     var strPagar: String = ""
     var dblPagar: Double = 0.00
@@ -23,6 +29,7 @@ class ComprarBilheteFragment : Fragment() {
     var dblMuseu : Double = 0.30
     var novoPagar: Double = 0.00
     var result: Double = 1.00
+    private lateinit var sharedpreferences: SharedPreferences
 
     lateinit var myQuantidadeEditText: EditText
     private lateinit var limpar: Button
@@ -58,7 +65,7 @@ class ComprarBilheteFragment : Fragment() {
         radioB2 = root.findViewById(R.id.compraB_radiobutton_tipo_2)
         radioB3 = root.findViewById(R.id.compraB_radiobutton_tipo_3)
         pagar = root.findViewById(R.id.compraB_pagar_button)
-
+        sharedpreferences = requireContext().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE)
         radioM1.isChecked
         radioB1.isChecked
 
@@ -131,6 +138,9 @@ class ComprarBilheteFragment : Fragment() {
             }else{
                 val intent = Intent(activity, TipoPagamentoActivity::class.java)
                 startActivity(intent)
+                val editor: SharedPreferences.Editor = sharedpreferences.edit()
+                editor.putString("VALOR", strPagar)
+                editor.apply()
             }
         }
         return root

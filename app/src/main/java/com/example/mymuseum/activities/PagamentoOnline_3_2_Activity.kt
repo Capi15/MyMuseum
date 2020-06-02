@@ -1,14 +1,18 @@
 package com.example.mymuseum.activities
 
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.example.mymuseum.R
+import com.example.mymuseum.ui.comprarbilhete.ComprarBilheteFragment.Companion.MyPREFERENCES
 
 class PagamentoOnline_3_2_Activity : AppCompatActivity() {
 
@@ -16,6 +20,8 @@ class PagamentoOnline_3_2_Activity : AppCompatActivity() {
     private lateinit var numeroCart: EditText
     private lateinit var validade: EditText
     private lateinit var cvv: EditText
+    private lateinit var textValor: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +34,13 @@ class PagamentoOnline_3_2_Activity : AppCompatActivity() {
         numeroCart = findViewById(R.id.pagamento_online_outros_ncartao_edit)
         validade = findViewById(R.id.pagamento_online_outros_validade_edit)
         cvv = findViewById(R.id.pagamento_online_outros_cvv_edit)
+        textValor = findViewById(R.id.pagamento_online_outros_valor)
+
+        val preferences =
+            getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE)
+        val valor = preferences.getString("VALOR", "")
+        textValor.text = valor
+
     }
 
     fun concluiPagamento(view: View) {
