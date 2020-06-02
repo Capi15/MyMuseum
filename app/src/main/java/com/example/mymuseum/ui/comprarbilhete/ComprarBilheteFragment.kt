@@ -17,8 +17,8 @@ class ComprarBilheteFragment : Fragment() {
     var totalPagar: TextView? = null
     var strPagar: String = ""
     var dblPagar: Double = 0.00
-    var dblBilhete : Double = 0.00
-    var dblMuseu : Double = 0.00
+    var dblBilhete : Double = 1.75
+    var dblMuseu : Double = 0.30
     var novoPagar: Double = 0.00
     var result: Double = 1.00
 
@@ -55,6 +55,9 @@ class ComprarBilheteFragment : Fragment() {
         radioB2 = root.findViewById(R.id.compraB_radiobutton_tipo_2)
         radioB3 = root.findViewById(R.id.compraB_radiobutton_tipo_3)
 
+        radioM1.isChecked
+        radioB1.isChecked
+
         radioGroup1.setOnCheckedChangeListener{ radioGroup: RadioGroup, checkedId: Int ->
             val radioButton = root.findViewById<RadioButton>(checkedId)
             dblMuseu = when (checkedId) {
@@ -79,21 +82,12 @@ class ComprarBilheteFragment : Fragment() {
               when (checkedId) {
                 radioB1.id -> {
                     dblBilhete = 1.75
-//                    novoPagar = result * (dblBilhete + dblMuseu)
-//                    strPagar = novoPagar.toString()
-//                    totalPagar!!.text = strPagar
                 }
                 radioB2.id -> {
                     dblBilhete = 3.00
-//                    novoPagar = result * (dblBilhete + dblMuseu)
-//                    strPagar = novoPagar.toString()
-//                    totalPagar!!.text = strPagar
                 }
                 radioB3.id -> {
                     dblBilhete = 4.15
-//                    novoPagar = result * (dblBilhete + dblMuseu)
-//                    strPagar = novoPagar.toString()
-//                    totalPagar!!.text = strPagar
                 }
                 else -> {
                     dblBilhete = 0.00
@@ -113,12 +107,14 @@ class ComprarBilheteFragment : Fragment() {
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
                 val quantidade: String = myQuantidadeEditText.text.toString()
-                if(!quantidade.isEmpty()){
+                if(quantidade.isNotEmpty()){
                     dblPagar = quantidade.toDouble()
                     result = dblPagar * (dblBilhete + dblMuseu)
                     Toast.makeText(activity, result.toString(), Toast.LENGTH_SHORT).show()
                 }else{
-                    result = dblBilhete + dblMuseu
+                    radioM1.isChecked
+                    radioB1.isChecked
+                    result = 0.00
                 }
                 strPagar = result.toString()
                 totalPagar!!.text = strPagar
